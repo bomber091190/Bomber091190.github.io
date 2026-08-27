@@ -1,20 +1,20 @@
 const filmes = [
-	{ t: "Ghost - Do Outro Lado da Vida", img: "https://m.media-amazon.com/images/M/MV5BNTgyY2Y0ODUtYjQyYi00NjJhLTg4Y2EtMTAzMTEzYjI2MzZkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg" },
-	{ t: "Ghostbusters", img: "https://m.media-amazon.com/images/M/MV5BMTQ0MDE5MTg4M15BMl5BanBnXkFtZTcwMzYzOTQyMw@@._V1_.jpg" },
-	{ t: "Ghost Rider", img: "https://m.media-amazon.com/images/M/MV5BMTk4OTQzMDE1OF5BMl5BanBnXkFtZTcwMDI5MTUyMQ@@._V1_.jpg" }
+  { t: "Ghost", img: "https://via.placeholder.com/300x450?text=Ghost" },
+  { t: "Ghostbusters", img: "https://via.placeholder.com/300x450?text=Ghostbusters" },
+  { t: "Ghost Rider", img: "https://via.placeholder.com/300x450?text=Ghost+Rider" }
 ];
 
 function mostrar(lista) {
-	const container = document.getElementById("grid");
-	container.innerHTML = "";
-	lista.forEach(filme => {
-		container.innerHTML += `
-			<div class="card">
-				<img src="${filme.img}" style="width:100%; border-radius:10px;">
-				<h3>${filme.t}</h3>
-			</div>
-		`;
-	});
+  const container = document.getElementById("grid");
+  container.innerHTML = "";
+  lista.forEach(filme => {
+    container.innerHTML += `
+      <div class="card">
+        <img src="${filme.img}">
+        <h3>${filme.t}</h3>
+      </div>
+    `;
+  });
 }
 
 mostrar(filmes);
