@@ -1,36 +1,20 @@
-
 const filmes = [
-	{ t: "Vingadores", img: "https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg" },
-	{ t: "Barbie", img: "https://image.tmdb.org/t/p/w500/iuFNMS8U5cb6xfzi81RuehKBHyl.jpg" },
-	{ t: "Mario", img: "https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV.jpg" }
+	{ t: "Ghost - Do Outro Lado da Vida", img: "https://m.media-amazon.com/images/MV5BNTgyY2Y0ODUtYjQyYi00NjJhLTg4Y2EtMTAzMTEzYjI2MzZkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg" },
+	{ t: "Ghostbusters", img: "https://m.media-amazon.com/images/M/MV5BMTQ0MDE5MTg4M15BMl5BanBnXkFtZTcwMzYzOTQyMw@@._V1_.jpg" },
+	{ t: "Ghost Rider", img: "https://m.media-amazon.com/images/M/MV5BMTk4OTQzMDE1OF5BMl5BanBnXkFtZTcwMDI5MTUyMQ@@._V1_.jpg" }
 ];
 
-const grid = document.getElementById("grid");
-
 function mostrar(lista) {
-	grid.innerHTML = lista
-		.map(
-			filme => `
-				<div class="card" onclick="window.open('https://www.primevideo.com/search?phrase=${encodeURIComponent(filme.t)}', '_blank')">
-					<img src="${filme.img}" alt="${filme.t}">
-					<div class="info">
-						<h3>${filme.t}</h3>
-						<button class="btn" type="button">Assistir Oficial</button>
-					</div>
-				</div>`
-		)
-		.join("");
+	const container = document.getElementById("filmes");
+	container.innerHTML = "";
+	lista.forEach(filme => {
+		container.innerHTML += `
+			<div class="card">
+				<img src="${filme.img}" style="width:100%; border-radius:10px;">
+				<h3>${filme.t}</h3>
+			</div>
+		`;
+	});
 }
 
-function mostrar(lista) {
-  const container = document.getElementById("filmes");
-  container.innerHTML = "";
-  lista.forEach(filme => {
-    container.innerHTML += `
-      <div class="card">
-        <img src="${filme.img}">
-        <h3>${filme.t}</h3>
-      </div>
-    `;
-  });
-}
+mostrar(filmes);
