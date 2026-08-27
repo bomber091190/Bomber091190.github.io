@@ -22,9 +22,15 @@ function mostrar(lista) {
 		.join("");
 }
 
-mostrar(filmes);
-
-document.getElementById("busca").addEventListener("keyup", evento => {
-	const termo = evento.target.value.toLowerCase();
-	mostrar(filmes.filter(filme => filme.t.toLowerCase().includes(termo)));
-});
+function mostrar(lista) {
+  const container = document.getElementById("filmes");
+  container.innerHTML = "";
+  lista.forEach(filme => {
+    container.innerHTML += `
+      <div class="card">
+        <img src="${filme.img}">
+        <h3>${filme.t}</h3>
+      </div>
+    `;
+  });
+}
