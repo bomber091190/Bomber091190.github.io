@@ -5,7 +5,7 @@ const filmes = [
 ];
 
 function mostrar(lista) {
-	const container = document.getElementById("filmes");
+	const container = document.getElementById("grid");
 	container.innerHTML = "";
 	lista.forEach(filme => {
 		container.innerHTML += `
