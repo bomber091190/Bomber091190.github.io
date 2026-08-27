@@ -1,7 +1,7 @@
 const filmes = [
-	{ t: "Ghost", img: "https://via.placeholder.com/300x450?text=Ghost" },
-	{ t: "Ghostbusters", img: "https://via.placeholder.com/300x450?text=Ghostbusters" },
-	{ t: "Ghost Rider", img: "https://via.placeholder.com/300x450?text=Ghost+Rider" }
+  { t: "Ghost", img: "https://picsum.photos/300/450?random=1" },
+  { t: "Ghostbusters", img: "https://picsum.photos/300/450?random=2" },
+  { t: "Ghost Rider", img: "https://picsum.photos/300/450?random=3" }
 ];
 
 function mostrar(lista) {
